@@ -2,3 +2,12 @@
 
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
+
+<% @posts.each do |post| %>
+
+  <%= post.title %><br />
+  <%= post.body %><br />
+  <%= post.created_at.strftime("%B, %d, %Y") %><br />
+  <%= post.user.email %>
+
+<% end %>

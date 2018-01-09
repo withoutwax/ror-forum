@@ -5,9 +5,20 @@
 
 <% @posts.each do |post| %>
 
-  <%= post.title %><br />
-  <%= post.body %><br />
-  <%= post.created_at.strftime("%B, %d, %Y") %><br />
-  <%= post.user.email %>
+  <h2>
+    <%= link_to post.title, post %>
+  </h2>
+
+  <p>
+    <%= post.body %>
+  </p>
+  <p>
+    <%= post.created_at.strftime("%B, %d, %Y") %>
+  </p>
+
+  <p>
+    <%= post.user.email %>
+  </p>
+  
 
 <% end %>

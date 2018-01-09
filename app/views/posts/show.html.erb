@@ -1,5 +1,25 @@
-<%= @post.user.name %>
-<%= @post.created_at.strftime("%B, %d, %Y") %>
 
-<%= @post.title %>
-<%= @post.body %>
+<%= link_to "Back to Posts", posts_path %>
+
+<h2>Title</h2>
+<p>
+  <%= @post.title %>
+</p>
+
+<h2>Body</h2>
+<p>
+  <%= @post.body %>
+</p>
+
+<p>
+  <%= @post.created_at.strftime("%B, %d, %Y") %>
+</p>
+
+<%= link_to "Edit Posts", edit_post_path(@post) %>
+
+
+<h2>Comments</h2>
+<%= render 'comments/comment' %>
+
+<h2>Add a Comment:</h2>
+<%= render 'comments/form' %>

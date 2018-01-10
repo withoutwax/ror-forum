@@ -1,5 +1,12 @@
 <h1>Post!</h1>
 
+<% if user_signed_in? %>
+  <%= link_to 'Edit Profile', edit_user_registration_path %><br />
+  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+<% else %>
+  <%= link_to('Login', new_user_session_path) %>
+<% end %>
+
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 
@@ -19,6 +26,10 @@
   <p>
     <%= post.user.email %>
   </p>
-  
+
 
 <% end %>
+<br />
+<p>
+  <%= link_to "Create a new post", new_post_path %>
+</p>

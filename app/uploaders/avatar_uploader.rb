@@ -20,28 +20,28 @@ class AvatarUploader < CarrierWave::Uploader::Base
   end
 
   # Create different versions of your uploaded files:
-  version :print do
-    version :thumb    { process :resize_to_fit => [32, 32] }
-    version :preview  { process :resize_to_fit => [256, 256] }
-    version :full     { process :resize_to_fit => [2048, 2048] }
-  end
-
-  version :web do
-    version :thumb    { process :resize_to_fit => [32, 32] }
-    version :preview  { process :resize_to_fit => [128, 128] }
-    version :full     { process :resize_to_fit => [1024, 768] }
-  end
-  # version :thumb do
-  #   process :resize_to_fill => [100, 100]
-  # end
-
-  # version :medium do
-  #   process :resize_to_fill => [300, 300]
+  # version :print do
+  #   version :thumb    { process :resize_to_fit => [32, 32] }
+  #   version :preview  { process :resize_to_fit => [256, 256] }
+  #   version :full     { process :resize_to_fit => [2048, 2048] }
   # end
   #
-  # version :small do
-  #   process :resize_to_fill => [140, 140]
+  # version :web do
+  #   version :thumb    { process :resize_to_fit => [32, 32] }
+  #   version :preview  { process :resize_to_fit => [128, 128] }
+  #   version :full     { process :resize_to_fit => [1024, 768] }
   # end
+  version :thumb do
+    process :resize_to_fill => [100, 100]
+  end
+
+  version :medium do
+    process :resize_to_fill => [300, 300]
+  end
+
+  version :small do
+    process :resize_to_fill => [140, 140]
+  end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url(*args)

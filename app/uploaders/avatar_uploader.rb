@@ -65,6 +65,6 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # end
 
   def default_url(*args)
-    ActionController::Base.helpers.asset_path("fallback/" + [version_name, "default_profile"].compact.join('_'))
+    ActionController::Base.helpers.asset_path("fallback/" + [version_name, "default_profile.jpg"].compact.join('_'))
   end
 end

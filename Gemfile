@@ -21,6 +21,7 @@ gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog'
+gem 'fog-aws'
 
 gem 'figaro'
 

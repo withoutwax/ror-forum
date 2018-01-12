@@ -18,9 +18,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 
 # Image Upload
-gem 'carrierwave'
+gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
-gem 'fog-aws'
+gem 'fog-aws', group: :production
 
 group :development, :test do
   gem 'sqlite3'

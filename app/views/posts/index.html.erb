@@ -26,7 +26,6 @@
 
   <p>
     <%= post.user.name %>
-    <%= image_tag(post.user.avatar.url, alt: 'Avatar') if post.user.avatar? %>
     <%= link_to(image_tag(post.user.avatar.thumb.url, alt: 'Avatar'), post.user.avatar.url, target: '_blank') if post.user.avatar? %>
   </p>
 

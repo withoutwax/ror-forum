@@ -77,6 +77,8 @@ GEM
     excon (0.60.0)
     execjs (2.7.0)
     ffi (1.9.18)
+    figaro (1.1.1)
+      thor (~> 0.14)
     fog-aws (2.0.0)
       fog-core (~> 1.38)
       fog-json (~> 1.0)
@@ -225,6 +227,7 @@ DEPENDENCIES
   carrierwave (~> 1.0)
   coffee-rails (~> 4.2)
   devise
+  figaro
   fog-aws
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)

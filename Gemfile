@@ -20,10 +20,7 @@ gem 'devise'
 # Image Upload
 gem 'carrierwave'
 gem 'mini_magick'
-gem 'fog'
 gem 'fog-aws'
-
-gem 'figaro'
 
 group :development, :test do
   gem 'sqlite3'

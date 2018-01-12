@@ -9,6 +9,23 @@
   <%= f.label :body %>
   <%= f.text_area :body %>
 
+  <br />
+  <br />
+
+  <% if @post.image? %>
+    <%= image_tag @post.image.thumb.url %>
+    <div>
+      <%= label_tag :remove_image do %>
+        Remove image
+        <%= f.check_box :remove_image %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <%= f.label :image %>
+  <%= f.file_field :image %>
+  <%= f.hidden_field :image_cache %>
+
   <%= f.submit 'Submit' %>
 
 <% end %>

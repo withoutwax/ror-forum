@@ -20,8 +20,9 @@ gem 'devise'
 # Image Upload
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
-gem 'fog-aws', group: :production
+gem 'fog-aws'
 gem 'figaro'
+gem 'file_validators'
 
 group :development, :test do
   gem 'sqlite3'
@@ -31,6 +32,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'dotenv-rails'
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'

@@ -1,16 +1,6 @@
 
 <%= link_to "Back to Posts", posts_path %>
 
-<% if object.errors.any? %>
-  <h3>Some errors were found:</h3>
-  <ul>
-    <% object.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-  </ul>
-<% end %>
-
-
 <h2>Title</h2>
 <p>
   <%= @post.title %>

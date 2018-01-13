@@ -22,6 +22,7 @@
   </p>
   <p>
     <%= post.created_at.strftime("%B, %d, %Y") %>
+    <%= link_to "Like", post_likes_path(post), method: :post %>
   </p>
 
   <p>

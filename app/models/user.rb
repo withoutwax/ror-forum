@@ -7,17 +7,17 @@ class User < ApplicationRecord
 
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
-  has_many :likes, dependent: :destroy
+  # has_many :likes, dependent: :destroy
   # has_many :liked_posts, through: :likes, source: :likeable, source_type: "Post"
   # has_many :liked_comments, through: :likes, source: :likeable, source_type: "Comment"
 
-  def like!(likeable_obj)
-    likes.where(likeable: likeable_obj).first_or_create
-  end
-
-  def unlike!(likeable_obj)
-    likes.where(likeable: likeable_obj).destroy_all
-  end
+  # def like!(likeable_obj)
+  #   likes.where(likeable: likeable_obj).first_or_create
+  # end
+  #
+  # def unlike!(likeable_obj)
+  #   likes.where(likeable: likeable_obj).destroy_all
+  # end
 
 
   # User Avatar Validation

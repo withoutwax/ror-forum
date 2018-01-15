@@ -25,8 +25,6 @@ gem 'figaro'
 gem 'file_validators'
 gem 'dotenv-rails'
 
-gem 'act_as_votable'
-
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

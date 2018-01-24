@@ -14,8 +14,11 @@
 
 <p>
   <%= @post.created_at.strftime("%B, %d, %Y") %>
-  <!-- <%= link_to "Like", post_likes_path(@post), method: :post %> -->
 </p>
+
+<div id="likes">
+  <%= render partial: "likes" %>
+</div>
 
 <%= link_to "Edit Posts", edit_post_path(@post) %><br />
 <%= link_to "Delete Posts", post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %>

@@ -19,9 +19,7 @@ class Posts::LikesController < ApplicationController
       format.js
     end
   end
-
-
-
+  
   private
     def set_post
       @post = Post.find(params[:post_id])
